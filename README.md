@@ -1,6 +1,6 @@
 # Mask Stock
 
-## Story
+## Description
 
 Congratulations!
 Your developer business has a new client, one of the largest environmentally friendly reusable FFP2/KN95 mask supplier in Europe.
@@ -22,54 +22,79 @@ List of the hospitals:
 You have to create a web application where the hospitals' employee can login to their account and order new amount of masks.
 The hospitals paying for the order with bank transfer 15 days due date.
 The application should contain the following features: Automatically updated stock, order form, login and registration page, order history.
-The application have to care about the invoicing as well. Your client asked you to solve it with Billingo's API so you have to check the API's documentation for the information needed for generating invoices with Billingo API (you order form have to include all the necessary details).
-Don't forget that your Client's company is Hungarian so the Hungarian hospitals have to pay Hungarian TAX (VAT / ÁFA - 27%) but the hospitals form the other countries don't have to pay (if they have/set EU VAT Number).
+The application have to care about the invoicing as well.
 
-## What are you going to learn?
+## Tools and technologies learned
 
 - recap React JS, Node JS, Express JS
 - use MongooseJS
 - store data with mongoDB
 - connect to an API on the server side (fetch GET/POST)
 
-## Tasks
+## Installation
 
-1. Create a noSQL database which able to store all the required data: Legal data of the hospitals. (Check Billingo API's documentation.) Accounts for the hospitals employees. (The users.) Orders and their details.
-    - The database contains all the 10 hospitals
-    - Each hospital's data contains all the legal data for issuing an invoice for the hospital
-    - Every hospital have at least one user account
-    - User accounts connected to one or two hospitals
-    - An invoice is generated for every order
-    - Every order is saved into the database
-    - The amount of currently available masks is stored in the database
-    - Every order affects the available amount of the masks
+Use Node Package Manager [NPM](https://www.npmjs.com/) to install the required packages on the frontend and backend.
 
-2. Connect to the Billingo API from the backend side, post all the orders to the API to generate invoices. Handling TAX / VAT is important!
-    - Every order generates an invoice in Billingo
-    - The tax is different for Hungarian hospitals than other EU hospitals
+### For frontend
+```bash
+cd front-end
+npm i
+```
 
-3. Create a web based order form where the employees (users) can place orders on behalf of their hospitals. Secure the order form so only (the allowed) users could access to it. A users could see the orders of their hospitals only.
-    - The order form available only after login or registration
-    - The users are able to add new hospitals
-    - The users can see the hospitals data connected to their account
-    - The users can select from their hospitals for issuing the invoice
+### For backend
+```bash
+cd back-end
+npm i
+```
 
-## General requirements
+In adition to that, the following data is required for the application to function correctly and it can be required from any of the original developers.
+Send a request to a contact info of one of the developers, asking for the following fields:
+- PORT
+- ATLAS_URI
+- SECRET
+- NODEMAILER_SERVICE
+- NODEMAILER_HOST
+- USER
+- PASS
+- ACCESS_TOKEN_SECRET
+- REFRESH_TOKEN_SECRET
+- BASE_URL
 
-None
+### After obtaining the required information 
 
-## Hints
+Go to backend and create a new .env file
+```bash
+cd back-end
+touch .env
+```
+In that new .env file paste every field in the following format:
+```bash
+PORT="Port_you_obtained"
+ATLAS_URI="Atlas_uri_you_obtained"
+etc.
+```
 
-- Before you start the project, check the documentation of the Billingo API especially the required data for partner and invoice creation (build the hopsital database on those data)
-- Pay special attention to the format of all API values (string, number, date formats)
-- You can solve the registration and login with Passport.js
+## Starting Commands
+To start the backend server, from the original/root directory, go to backend in a terminal and type "npm start"
+```bash
+cd back-end
+npm start
+```
+To start the frontend, from the original/root directory, go to frontend in a terminal and type "npm run dev"
+```bash
+cd front-end
+npm run dev 
+```
 
-## Background materials
+## Visuals
 
-- <i class="far fa-exclamation"></i> [Billingo API documentation](https://app.swaggerhub.com/apis/Billingo/Billingo)
-- <i class="far fa-exclamation"></i> [Passport JS](http://www.passportjs.org)
-- <i class="far fa-book-open"></i> [MongoDB - NoSQL database](https://www.mongodb.com/)
-- <i class="far fa-book-open"></i> [MongooseJS - MongoDB connector](https://mongoosejs.com/)
-- <i class="far fa-book-open"></i> [Simple CRUD app with Node, Express, and MongoDB](https://zellwk.com/blog/crud-express-mongodb)
-- <i class="far fa-book-open"></i> [Set up an Express.Js App With Passport.Js and Mongodb for Password Authentication](https://medium.com/swlh/set-up-an-express-js-app-with-passport-js-and-mongodb-for-password-authentication-6ea05d95335c)
-- <i class="far fa-book-open"></i> [Authenticate Users With Node ExpressJS and Passport.js](https://heynode.com/tutorial/authenticate-users-node-expressjs-and-passportjs)
+### Register Form page
+![Screenshot 2023-05-22 214212](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/455c9c0f-1253-46f7-9de5-77ee97b6c502)
+### Login Form page
+![Screenshot 2023-05-22 214158](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/5d6a30f3-a1b0-4f72-9d55-92437fbc3e6d)
+### Home page after login with user account
+![Screenshot 2023-05-22 214140](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/58e81284-8865-4862-888b-f7d1fbbf1c89)
+### Medical Equipment Order page
+![Screenshot 2023-05-22 214121](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/fa48f016-87c8-42f1-8103-5c900e4ffaae)
+### Invoice after downloading it
+![Screenshot 2023-05-22 214617](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/0e69f566-a15d-4cca-81c0-cac843d120db)
