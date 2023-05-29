@@ -25,7 +25,7 @@ const NavbarMain = (props) => {
   };
 
   return <Row>
-    <Col style={{ padding: "0", width: "100%" }}>
+    <Col style={{ padding: "0", width: "100%" }} >
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand className="d-block d-lg-none"><FaHeadSideMask style={{ color: "whitesmoke", marginBottom: "0.2rem", marginRight: "1rem" }} />MASK-STOCK</Navbar.Brand>

@@ -108,7 +108,6 @@ router.post("/user-data", async (request, response, next) => {
 
 router.get("/auth/:id/:token", async (req, res, next) => {
   try {
-    console.log("in auth");
     const user = await User.findOne({ _id: req.params.id });
     if (!user) return next(createError.BadRequest("Invalid Link"));
     await User.updateOne({ _id: user.id }, { verified: true });
