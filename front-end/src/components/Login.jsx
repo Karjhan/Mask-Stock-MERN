@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useRef } from "react";
+import React, { useState, useCallback, useRef, useEffect } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -31,6 +31,10 @@ const Login = () => {
 
   const setEmail = (mail) =>
     setLoginDetails({ password: loginDetails.password, email: mail });
+  
+  useEffect(() => {
+    console.log(successCondition)    
+  },[successCondition])
 
   const formSubmitHandler = (event) => {
     event.preventDefault();

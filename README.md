@@ -89,12 +89,18 @@ npm run dev
 ## Visuals
 
 ### Register Form page
-![Screenshot 2023-05-22 214212](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/455c9c0f-1253-46f7-9de5-77ee97b6c502)
+![Register](./screenshots/SSMaskStockRegister.png)
 ### Login Form page
-![Screenshot 2023-05-22 214158](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/5d6a30f3-a1b0-4f72-9d55-92437fbc3e6d)
+![Login](./screenshots/SSMaskStockLogin.png)
 ### Home page after login with user account
-![Screenshot 2023-05-22 214140](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/58e81284-8865-4862-888b-f7d1fbbf1c89)
+![Home](./screenshots/SSMaskStockHome.png)
 ### Medical Equipment Order page
-![Screenshot 2023-05-22 214121](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/fa48f016-87c8-42f1-8103-5c900e4ffaae)
+![Order](./screenshots/SSMaskStockOrder.png)
 ### Invoice after downloading it
-![Screenshot 2023-05-22 214617](https://github.com/CodecoolGlobal/mask-stock-javascript-claudiumihait/assets/67586606/0e69f566-a15d-4cca-81c0-cac843d120db)
+![Invoice](./screenshots/SSMaskStockInvoice.png)
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contact
+Feel free to contact me at: karjhan1999@gmail.com
